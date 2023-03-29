@@ -1,0 +1,27 @@
+_______________________________________________________________
+Creating EC2 instance on AWS
+
+Instance Requirements:
+
+Type: Amazon Linux 2023 AMI (64bit)
+
+Instance Type: t2.micro
+
+Keypar SSH
+
+Security group with specific ports released 
+(22/TCP, 111/TCP and UDP, 2049/TCP/UDP, 80/TCP, 443/TCP).
+
+Standard Free Tier storage.
+________________________________________________________________
+
+VPC
+________________________________________________________________
+Standard VPC and subnets as well.
+
+Create an Internet Gateway and connect to the default VPC and subnets.
+
+Configure the Internet Gateway in the route table as public. 
+If there is a route in the table with "Blackhole" status, delete it.
+
+Create a public Elastic IP and attach it to the EC2 instance.
