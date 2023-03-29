@@ -1,0 +1,39 @@
+Lista de comandos: 
+
+______________________________________________________________________________
+Para criar chave ssh
+
+	ssh-keygen -t rsa -b 2048 -y
+	chmod 400 .ssh
+	chmod 400 .ssh/id_rsa.pub
+______________________________________________________________________________
+Conectando na Instância EC2
+
+	ssh -i .ssh/id_rsa ec2-user@PublicInstanceDNS -y
+______________________________________________________________________________
+
+Criando o EFS(Elastic File System)
+
+~/:     mkdir efs-mount-point
+	sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,
+	timeo=600,retrans=2,noresvport 
+	fs-0e846e260f84a752d.efs.us-east-1.amazonaws.com:/ efs-mount-point
+	cd efs-mount-point
+	mkdir "Nome"
+	cd Nome
+	mkdir Is_Online
+	mkdir IS_Offline
+______________________________________________________________________________
+
+Configurando o Apache
+
+	sudo dnf install httpd
+	sudo systemctl enable --now httpd.service
+	sudo systemctl status httpd(if has a green "enable" or "running" there is OK)
+	To acess the Apache Service on your web browser, you need to open the instance's public IPv4.
+	And make sure to open the 80 port in your VPC's security group.
+______________________________________________________________________________
+	
+	
+
+
