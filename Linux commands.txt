@@ -40,4 +40,8 @@ Script
 	cd Scripts
 	vim scipt.sh
 	chmod u+x script.sh
+______________________________________________________________________________
 
+Crontab
+	crontab -e
+	#Add this line: */5 * * * * /script
