@@ -1,18 +1,18 @@
-Command list: 
+Lista de comandos: 
 
 ______________________________________________________________________________
-To create SSH key
+Para criar chave ssh
 
 	ssh-keygen -t rsa -b 2048 -y
 	chmod 400 .ssh
 	chmod 400 .ssh/id_rsa.pub
 ______________________________________________________________________________
-Connecting to EC2 instance
+Conectando na Instância EC2
 
 	ssh -i .ssh/id_rsa ec2-user@PublicInstanceDNS -y
 ______________________________________________________________________________
 
-Creating the EFS(Elastic File System)
+Criando o EFS(Elastic File System)
 
 ~/:     mkdir efs-mount-point
 	sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,
@@ -25,7 +25,7 @@ Creating the EFS(Elastic File System)
 	mkdir IS_Offline
 ______________________________________________________________________________
 
-Configuring Apache
+Configurando o Apache
 
 	sudo dnf install httpd
 	sudo systemctl enable --now httpd.service
@@ -34,6 +34,10 @@ Configuring Apache
 	And make sure to open the 80 port in your VPC's security group.
 ______________________________________________________________________________
 	
-	
+Script
 
+	mkdir Scripts
+	cd Scripts
+	vim scipt.sh
+	chmod u+x script.sh
 
