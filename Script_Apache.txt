@@ -12,9 +12,9 @@ Mensagem="The service $service is online"
 
     if [[ -d/home/ec2-user/efs-mount-point/Urias/Online/ ]] ; then
         echo "Directory already exists . Sucess to create the log file."
-        mkdir /home/ec2-user/efs-mount-point/Urias/Online/
+        mkdir -p /home/ec2-user/efs-mount-point/Urias/Online/
     else
-        mkdir /home/ec2-user/efs-mount-point/Urias/Online/
+        mkdir -p /home/ec2-user/efs-mount-point/Urias/Online/
     fi
     touch /home/ec2-user/efs-mount-point/Urias/Online/Status Service$TIME.txt
     echo $date > /home/ec2-user/efs-mount-point/Urias/Online/Status_Service_$TIME.txt
@@ -26,9 +26,9 @@ else
     Mensagem="The service $service is Offline"
     if [[ -d/home/ec2-user/efs-mount-point/Urias/Offline/ ]] : then
         echo "Directory already exists. Sucess to create the log file."
-        mkdir /home/ec2-user/efs-mount-point/Urias/Offline/
+        mkdir -p /home/ec2-user/efs-mount-point/Urias/Offline/
     else
-        mkdir /home/ec2-user/efs-mount-point/Urias/Offline/
+        mkdir -p /home/ec2-user/efs-mount-point/Urias/Offline/
     fi
     touch /home/ec2-user/efs-mount-point/Urias/Offline/Status Service_$TIME.txt
     echo $date > /home/ec2-user/efs-mount-point/Urias/Offline/Status_Service_$TIME.txt
