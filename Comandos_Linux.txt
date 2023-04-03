@@ -29,6 +29,11 @@ Configurando o Apache
 	sudo systemctl status httpd(if has a green "enable" or "running" there is OK)
 	Para acessar o serviço Apache no navegador, você precisa ter um IPv4 público da instância.
 	E tanha certeza que a porta 80 do seu security group esteja aberta.
+	
+	#Abre a porta 443(HTTPS)
+	sudo yum install mod_ssl
+	sudo systemctl restart httpd
+
 ______________________________________________________________________________
 	
 Script
