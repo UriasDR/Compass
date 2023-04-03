@@ -20,9 +20,6 @@ Criando o EFS(Elastic File System)
 	fs-0e846e260f84a752d.efs.us-east-1.amazonaws.com:/ efs-mount-point
 	cd efs-mount-point
 	mkdir "Nome"
-	cd Nome
-	mkdir Is_Online
-	mkdir IS_Offline
 ______________________________________________________________________________
 
 Configurando o Apache
@@ -30,8 +27,8 @@ Configurando o Apache
 	sudo dnf install httpd
 	sudo systemctl enable --now httpd.service
 	sudo systemctl status httpd(if has a green "enable" or "running" there is OK)
-	To acess the Apache Service on your web browser, you need to open the instance's public IPv4.
-	And make sure to open the 80 port in your VPC's security group.
+	Para acessar o serviço Apache no navegador, você precisa ter um IPv4 público da instância.
+	E tanha certeza que a porta 80 do seu security group esteja aberta.
 ______________________________________________________________________________
 	
 Script
@@ -44,4 +41,4 @@ ______________________________________________________________________________
 
 Crontab
 	crontab -e
-	#Add this line: */5 * * * * /script
+	#Adicione esta linha: */5 * * * * /script
