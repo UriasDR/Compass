@@ -1,0 +1,27 @@
+_______________________________________________________________
+Criando a instância EC2 na AWS
+
+Rquisitos da instância:
+
+Type: Amazon Linux 2023 AMI (64bit)
+
+Instance Type: t2.micro
+
+Keypar SSH
+
+Security group com as portas escpecíficas liberadas.
+(22/TCP, 111/TCP and UDP, 2049/TCP/UDP, 80/TCP, 443/TCP).
+
+Armazenamento padrão do free tier.
+________________________________________________________________
+
+VPC
+________________________________________________________________
+VPC e Subnets padrão.
+
+Crie e conecte um internet gateway.
+
+Configure o internet gateway na tabela de rotas como público. 
+Se existir uma rota com o status "Blackhole", delete.
+
+Crie um IP Elástico público e anexe à tabela de rotas.
