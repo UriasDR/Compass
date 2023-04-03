@@ -1,0 +1,39 @@
+# Configurando o Linux 
+
+Baixe o Oracle Linux 8.7
+
+Tenha um aplicativo para Virtualização de Máquinas no seu computador. No projeto foi usado o VirtualBox.
+
+Dentro do VirtualBox, clique em Novo.
+
+Selecione a ISO do Oracle Linux, adicione pelo menos 2048MB de RAM e 2 CPU's.
+
+Crie um disco virtual com no mínimo 30G.
+
+Antes de iniciar a VM, vá para as configurações de rede e troque de modo NAT para Bridge, para ter acesso à internet.
+
+Em armazenamento, certifique-se que a controladora é o seu Oracle Linux 8.7.
+
+Em sistema, coloque o disco óptico como primeira opção.
+
+Inicie a VM.
+
+De um Enter em Instalar Oracle Linux 8.7, espere ele concluir um pré-downlaod.
+
+Selecione a linguagem do seu sistema, de preferência inglês.
+
+Aloque seu disco virtual.
+
+Ligue a sua rede caso ela esteja desligada.
+
+Configure a Time-Zone se quiser.
+
+Crie uma senha para o usuário root.
+
+Na seleção de software, selecione a opção "Server", sem interface gráfica.
+
+Prossiga para a instalação.
+
+Após concluir a instalação, reinicie o sistema.
+
+Logue com as suas credenciais e pronto.
